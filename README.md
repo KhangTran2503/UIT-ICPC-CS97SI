@@ -9,7 +9,7 @@
   - [x] []()
   
 - [ ] **2. Mathematics:**
-  - [x] [Yeehaa!](http://poj.org/problem?id=1799)
+  - [x] 1. [Yeehaa!](http://poj.org/problem?id=1799)
   - [x] [Factorial](http://poj.org/problem?id=1401)
   - [x] [Goldbach's Conjecture](http://poj.org/problem?id=2262)
   - [x] [The Circumference of the Circle](http://poj.org/problem?id=2242)
