@@ -2,7 +2,7 @@
 ---
 ## Team: UIT.Meow
 
-### Group Members:
+### Team Members:
 |ID| Name         |Codeforces       |
 |:-:|:------------------|:---------:|
 | 1	|[Avny](mailto:17520584@gm.uit.edu.vn)	| [Avny](https://codeforces.com/profile/Avny)	|
