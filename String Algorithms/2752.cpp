@@ -3,6 +3,7 @@
 #include <vector>
 #include <algorithm>
 
+
 using namespace std;
 
 vector<int> z_function(string s) {
