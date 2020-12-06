@@ -1,88 +1,89 @@
+#include <algorithm>
 #include <iostream>
 #include <string>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
 const int N = 1e5 + 7;
 const int M = 1e9 + 7;
 const int P = 3137;
-vector<int>fp(N), p2(N);
+const int K = 26;
+int fp[N], p2[N], cow[N], pat[N], res[N], pos[K];
+int h4s[30][N];
 
-int fpow(int b, int n){
-    int res = 1;
-    while (n) {
-        if (n & 1) res = 1LL * res * b % M;
+int fpow(int b, int n) {
+    int r = 1;
+    while (n > 0) {
+        if (n % 2 == 1) r = 1LL * r * b % M;
         b = 1LL * b * b % M;
-        n >>= 1;
+        n /= 2;
     }
-    return res;
+    return r;
 }
-int gcdex(int x){
-    return fpow(x, M - 2);
-}
-void init(){
-    for(int i=0;i<N;++i){
-        fp[i] = fpow(P, i);
-        p2[i] = i * i;
+int gcdex(int x) { return fpow(x, M - 2); }
+void init() {
+    fp[0] = 1;
+    for (int i = 1; i < N; ++i) {
+        fp[i] = 1LL * fp[i - 1] * P % M;
+        p2[i] = 1LL * i * i % M;
     }
 }
-int main(){
-    ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-    
+int main() {
+    ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
+
     init();
-    
+
     int n, k, s;
     cin >> n >> k >> s;
-    vector<int> cow(n), pat(k);
-    for(int i=0;i<n;++i) cin>>cow[i];
-    for(int i=0;i<k;++i) cin>>pat[i];
-    
-    
-    int h4sh = 0;
-    for(int i=0;i<k;++i)h4sh = (1LL * p2[pat[i]] * fp[i] % M + h4sh) % M;
-    
-    vector<vector<int>> pos(30), has(30);
-    
-    for(int i=0;i<30;++i){
-        pos[i].push_back(-1);
-        has[i].push_back(0);
-    }
-    
-    for(int i=0;i<n;++i){
-        pos[cow[i]].push_back(i);
-        has[cow[i]].push_back(has[cow[i]].back());
-        has[cow[i]].back() = (has[cow[i]].back() + fp[i]) % M;
-    }
-    
-    for(int i=0;i<30;++i){
-        pos[i].push_back(n);
-        has[i].push_back(pos[i].back());
-    }
-    
-    vector<int>res;
-    for(int i=0;i+k<=n;++i){
-        int hval = 0, cur = 0;
-        for(int j=0;j<30;++j){
-            int l = lower_bound(pos[j].begin(), pos[j].end(), i) - pos[j].begin();
-            int r = lower_bound(pos[j].begin(), pos[j].end(), i + k) - pos[j].begin();
+    for (int i = 0; i < n; ++i) cin >> cow[i];
+    for (int i = 0; i < k; ++i) cin >> pat[i];
 
-            if (pos[j][l] >= i + k)continue;
-            int t = pat[pos[j][l] - i];
-            if (t < cur){
+    int h4sh = 0;
+    for (int i = 0; i < k; ++i)
+        h4sh = (1LL * p2[pat[i]] * fp[i] % M + h4sh) % M;
+
+    fill(pos, pos + K, -1);
+    for (int i = 0; i < k; ++i) pos[pat[i]] = i;
+
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < K; ++j) {
+            if (j == cow[i])
+                h4s[j][i + 1] = (h4s[j][i] + fp[i]) % M;
+            else
+                h4s[j][i + 1] = h4s[j][i];
+        }
+    }
+
+    int res_siz = 0, t, hval, cur;
+    for (int i = 0; i + k <= n; ++i) {
+        hval = 0, cur = 0;
+        for (int j = 0; j < K; ++j) {
+            t = pos[j];
+            if (t == -1) continue;
+            if (cow[i + t] <= cur) {
                 hval = M;
                 break;
             }
-            cur = t;
-            hval = (1LL * (has[j][r - 1] + M - has[j][l - 1]) % M * gcdex(fp[i]) % M * p2[t] % M + hval) % M;
+            cur = cow[i + t];
+
+            hval = (1LL * (h4s[cur][i + k] + M - h4s[cur][i]) * gcdex(fp[i]) %
+                        M * p2[j] +
+                    hval) %
+                   M;
         }
-        
-        if (h4sh == hval) res.push_back(i);
+
+        if (h4sh == hval) res[res_siz++] = i;
     }
-    
-    cout << res.size() << '\n';
-    for(int i=0;i<(int)res.size();++i)cout<<res[i]+1<<'\n';
-    
+
+    /*
+    string ans = to_string(res_siz) + "\n";
+    for (int i = 0; i < res_siz; ++i) ans += to_string(res[i] + 1) + "\n";
+    cout << ans;
+    */
+
+    cout << res_siz << '\n';
+    for (int i = 0; i < res_siz; ++i) cout << res[i] + 1 << '\n';
+
     return 0;
 }
