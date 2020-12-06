@@ -27,7 +27,7 @@
   - [ ] 5. [Area](http://poj.org/problem?id=1654)
   - [x] 6. [BST](http://poj.org/problem?id=2309)
   - [ ] 7. [Chocolate Chip Cookies](http://poj.org/problem?id=2693)
-  - [ ] 8. [Game of Connections](http://poj.org/problem?id=2084)
+  - [x] 8. [Game of Connections](http://poj.org/problem?id=2084)
   - [ ] 9. [Inversion](http://poj.org/problem?id=2085)
   - [ ] 10. [Find The Multiple](http://poj.org/problem?id=1426)
   - [ ] 11. [Find a multiple](http://poj.org/problem?id=2356)
