@@ -9,7 +9,7 @@ const int N = 1e5 + 7;
 const int M = 1e9 + 7;
 const int P = 3137;
 const int K = 26;
-int fp[N], p2[N], cow[N], pat[N], res[N], pos[K];
+int fp[N], gx[N], p2[N], cow[N], pat[N], res[N], pos[K];
 int h4s[30][N];
 
 int fpow(int b, int n) {
@@ -24,9 +24,11 @@ int fpow(int b, int n) {
 int gcdex(int x) { return fpow(x, M - 2); }
 void init() {
     fp[0] = 1;
+    gx[0] = 1;
     for (int i = 1; i < N; ++i) {
-        fp[i] = 1LL * fp[i - 1] * P % M;
         p2[i] = 1LL * i * i % M;
+        fp[i] = 1LL * fp[i - 1] * P % M;
+        gx[i] = gcdex(fp[i]);
     }
 }
 void to_string(string &a, int t){
@@ -72,8 +74,7 @@ int main() {
             }
             cur = cow[i + t];
 
-            hval = (1LL * (h4s[cur][i + k] + M - h4s[cur][i]) * gcdex(fp[i]) %
-                        M * p2[j] + hval) % M;
+            hval = (1LL * (h4s[cur][i + k] + M - h4s[cur][i]) * gx[i] % M * p2[j] + hval) % M;
         }
 
         if (h4sh == hval) res[res_siz++] = i;
