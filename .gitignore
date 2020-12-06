@@ -1,3 +1,11 @@
+# all file
+*
+# Unignore file.cpp
+!*.cpp
+
+# Unignore all dirs
+!*/
+
 # Prerequisites
 *.d
 
