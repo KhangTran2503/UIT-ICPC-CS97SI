@@ -3,6 +3,9 @@
 # Unignore file.cpp
 !*.cpp
 
+# Unignore file.cpp
+!*.py
+
 # Unignore all dirs
 !*/
 
