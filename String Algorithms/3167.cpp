@@ -9,8 +9,9 @@ const int N = 1e5 + 7;
 const int M = 1e9 + 7;
 const int P = 3137;
 const int K = 26;
-int fp[N], gx[N], p2[N], cow[N], pat[N], res[N], pos[K];
-int h4s[30][N];
+int fp[N], gx[N], p2[N], cow[N], pat[N], res[N];
+int pos[K];
+int h4s[K][N];
 
 int fpow(int b, int n) {
     int r = 1;
@@ -30,11 +31,6 @@ void init() {
         fp[i] = 1LL * fp[i - 1] * P % M;
         gx[i] = gcdex(fp[i]);
     }
-}
-void to_string(string &a, int t){
-    if (t == 0) return;
-    to_string(a, t / 10);
-    a += char(t % 10 + 48);
 }
 int main() {
     ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
@@ -80,21 +76,8 @@ int main() {
         if (h4sh == hval) res[res_siz++] = i;
     }
 
-    
-    string ans = "";
-    to_string(ans, res_siz);
-    ans += "\n";
-    for (int i = 0; i < res_siz; ++i) {
-        to_string(ans, res[i] + 1);
-        ans += "\n";
-    }
-    cout << ans;
-    
-
-    /*
     cout << res_siz << '\n';
     for (int i = 0; i < res_siz; ++i) cout << res[i] + 1 << '\n';
-    */
 
     return 0;
 }
