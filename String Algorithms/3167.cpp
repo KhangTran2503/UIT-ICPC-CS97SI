@@ -29,6 +29,11 @@ void init() {
         p2[i] = 1LL * i * i % M;
     }
 }
+void to_string(string &a, int t){
+    if (t == 0) return;
+    to_string(a, t / 10);
+    a += char(t % 10 + 48);
+}
 int main() {
     ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
 
@@ -68,22 +73,27 @@ int main() {
             cur = cow[i + t];
 
             hval = (1LL * (h4s[cur][i + k] + M - h4s[cur][i]) * gcdex(fp[i]) %
-                        M * p2[j] +
-                    hval) %
-                   M;
+                        M * p2[j] + hval) % M;
         }
 
         if (h4sh == hval) res[res_siz++] = i;
     }
 
-    /*
-    string ans = to_string(res_siz) + "\n";
-    for (int i = 0; i < res_siz; ++i) ans += to_string(res[i] + 1) + "\n";
+    
+    string ans = "";
+    to_string(ans, res_siz);
+    ans += "\n";
+    for (int i = 0; i < res_siz; ++i) {
+        to_string(ans, res[i] + 1);
+        ans += "\n";
+    }
     cout << ans;
-    */
+    
 
+    /*
     cout << res_siz << '\n';
     for (int i = 0; i < res_siz; ++i) cout << res[i] + 1 << '\n';
+    */
 
     return 0;
 }
