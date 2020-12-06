@@ -8,7 +8,7 @@
   - [x] 1. [All in All](http://poj.org/problem?id=1936)
   - [x] 2. [Anagram Groups](http://poj.org/problem?id=2408)
   - [x] 3. [Questions](http://poj.org/problem?id=2359)
-  - [ ] 4. [Dictionary](http://poj.org/problem?id=1750)
+  - [x] 4. [Dictionary](http://poj.org/problem?id=1750)
   - [x] 5. [Seek the Name, Seek the Fame](http://poj.org/problem?id=2752)
   - [x] 6. [Period](http://poj.org/problem?id=1961)
   - [ ] 7. [Binary codes](http://poj.org/problem?id=1147)
