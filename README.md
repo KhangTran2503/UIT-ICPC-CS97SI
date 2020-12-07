@@ -15,7 +15,7 @@
   - [ ] 8. [Milk Patterns](http://poj.org/problem?id=3261)
   - [ ] 9. [Milking Grid](http://poj.org/problem?id=2185)
   - [ ] 10. [Snowflake Snow Snowflakes](http://poj.org/problem?id=3349)
-  - [ ] 11. [Cow Patterns](http://poj.org/problem?id=3167)
+  - [x] 11. [Cow Patterns](http://poj.org/problem?id=3167)
   - [x] 12. [Long Long Message](http://poj.org/problem?id=2774)
 
   
