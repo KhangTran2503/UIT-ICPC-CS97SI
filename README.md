@@ -24,7 +24,7 @@
   - [x] 2. [Factorial](http://poj.org/problem?id=1401)
   - [x] 3. [Goldbach's Conjecture](http://poj.org/problem?id=2262)
   - [x] 4. [The Circumference of the Circle](http://poj.org/problem?id=2242)
-  - [ ] 5. [Area](http://poj.org/problem?id=1654)
+  - [x] 5. [Area](http://poj.org/problem?id=1654)
   - [x] 6. [BST](http://poj.org/problem?id=2309)
   - [ ] 7. [Chocolate Chip Cookies](http://poj.org/problem?id=2693)
   - [x] 8. [Game of Connections](http://poj.org/problem?id=2084)
