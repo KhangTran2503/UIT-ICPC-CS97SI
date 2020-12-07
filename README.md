@@ -26,7 +26,7 @@
   - [x] 4. [The Circumference of the Circle](http://poj.org/problem?id=2242)
   - [x] 5. [Area](http://poj.org/problem?id=1654)
   - [x] 6. [BST](http://poj.org/problem?id=2309)
-  - [ ] 7. [Chocolate Chip Cookies](http://poj.org/problem?id=2693)
+  - [x] 7. [Chocolate Chip Cookies](http://poj.org/problem?id=2693)
   - [x] 8. [Game of Connections](http://poj.org/problem?id=2084)
   - [ ] 9. [Inversion](http://poj.org/problem?id=2085)
   - [ ] 10. [Find The Multiple](http://poj.org/problem?id=1426)
