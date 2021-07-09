@@ -1,15 +1,17 @@
 # ICPC-CS97SI
+
+## Course: [Introduction to Programming Contests](https://web.stanford.edu/class/cs97si/)
 ---
 
 ## Practice:
 
 - [ ] **1. Coding Exercise:**
-  - [ ] 1. [A+B Problem](http://poj.org/problem?id=1000) 
-  - [ ] 2. [Financial Management](http://poj.org/problem?id=1004)
-  - [ ] 3. [Hangover](http://poj.org/problem?id=1003)
-  - [ ] 4. [DNA Sorting](http://poj.org/problem?id=1007)
+  - [x] 1. [A+B Problem](http://poj.org/problem?id=1000) 
+  - [x] 2. [Financial Management](http://poj.org/problem?id=1004)
+  - [x] 3. [Hangover](http://poj.org/problem?id=1003)
+  - [x] 4. [DNA Sorting](http://poj.org/problem?id=1007)
   - [ ] 5. [Vertical Histogram](http://poj.org/problem?id=2136)
-  - [ ] 6. [Herd Sums](http://poj.org/problem?id=2140)
+  - [x] 6. [Herd Sums](http://poj.org/problem?id=2140)
   - [ ] 7. [Adding Reversed Numbers](http://poj.org/problem?id=1504)
   - [ ] 8. [Manhattan 2025](http://poj.org/problem?id=1806)
   - [ ] 9. [Exponentiation](http://poj.org/problem?id=1001)
