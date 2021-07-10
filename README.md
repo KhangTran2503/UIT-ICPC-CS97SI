@@ -12,7 +12,7 @@
   - [x] 4. [DNA Sorting](http://poj.org/problem?id=1007)
   - [x] 5. [Vertical Histogram](http://poj.org/problem?id=2136)
   - [x] 6. [Herd Sums](http://poj.org/problem?id=2140)
-  - [ ] 7. [Adding Reversed Numbers](http://poj.org/problem?id=1504)
+  - [x] 7. [Adding Reversed Numbers](http://poj.org/problem?id=1504)
   - [ ] 8. [Manhattan 2025](http://poj.org/problem?id=1806)
   - [ ] 9. [Exponentiation](http://poj.org/problem?id=1001)
   - [ ] 10. [Ride to School](http://poj.org/problem?id=1922)
@@ -30,7 +30,7 @@
   - [x] 8. [Game of Connections](http://poj.org/problem?id=2084)
   - [x] 9. [Inversion](http://poj.org/problem?id=2085)
   - [x] 10. [Find The Multiple](http://poj.org/problem?id=1426)
-  - [ ] 11. [Find a multiple](http://poj.org/problem?id=2356)
+  - [x] 11. [Find a multiple](http://poj.org/problem?id=2356)
   - [ ] 12. [Utopia Divided](http://poj.org/problem?id=1148)
 
 
