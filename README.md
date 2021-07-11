@@ -37,7 +37,7 @@
 - [ ] **3. Data Structure:**
   - [x] 1. [Hardwood Species](http://poj.org/problem?id=2418)
   - [x] 2. [Nearest Common Ancestors](http://poj.org/problem?id=1330)
-  - [ ] 3. [Expressions](http://poj.org/problem?id=3367)
+  - [x] 3. [Expressions](http://poj.org/problem?id=3367)
   - [ ] 4. [Navigation Nightmare](http://poj.org/problem?id=1984)
   - [ ] 5. [Binary Search Heap Construction](http://poj.org/problem?id=1785)
   - [ ] 6. [Cube Stacking](http://poj.org/problem?id=1988)
